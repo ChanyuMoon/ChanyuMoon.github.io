@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: ubuntu setting 후 ROS tutorial
 ---  
 

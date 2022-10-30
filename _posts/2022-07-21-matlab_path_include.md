@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 폴더 경로 포함 자동화
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 우분투에서 비디오 및 시스템 소리 녹화하기
 ---
 

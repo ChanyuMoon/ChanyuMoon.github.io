@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Python 버전 설치 가이드(make error)
 ---  
 

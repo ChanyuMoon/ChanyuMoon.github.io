@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: killing browser based margin, kokoa clone.
 ---  
 

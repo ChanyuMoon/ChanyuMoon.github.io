@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: css 예제, kokoa clone.
 ---
 

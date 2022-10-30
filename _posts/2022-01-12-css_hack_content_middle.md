@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 titile: 여러 content들을 3등분 한 위치에 두되 중간 content를 화면 정확히 중간에 두는 법, css hack, kokoa clone.
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: 절대 경로와 상대 경로
 ---
 
