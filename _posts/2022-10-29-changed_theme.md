@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "테마 바꾸고 첫 포스팅"
 ---
 
