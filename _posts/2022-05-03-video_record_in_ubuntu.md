@@ -1,6 +1,9 @@
 ---
 layout: single
 title: 우분투에서 비디오 및 시스템 소리 녹화하기
+modified: 2022-11-01
+categories: ubuntu
+tags: [ubuntu, sound record, video record]
 ---
 
 학교 자율차 lab실에서 새로 ubuntu를 세팅하면서 이전에 잘 되지 않았던 것들에 대해서 다시 진행해보는 시간을 가졌다.  
@@ -15,10 +18,9 @@ title: 우분투에서 비디오 및 시스템 소리 녹화하기
 
 하지만 audio 설정 부분에서 ALSA 로 audio source를 바꾼뒤 default source로 audio input 설정을 하였더니 시스템 소리가 잘 녹화가 되는 것이다.  
 
-![image](img/2022-05-03_simplescreenrecoder_audio_setting.png)
+![audio setting](/assets/images/2022-05-03-video_record_in_ubuntu/simplescreenrecoder_audio_setting.png){: .align-center width="50%" height="50%"}
 
 혹시 안된다면 이렇게 audio 설정을 해보자. 마법 같이 바뀐다.  
 
-- 추가 설정 참고 사이트  
-output file을 mp4로 설정 할 때 ubuntu 에서 실행이 안되는 경우  
-  : https://askubuntu.com/questions/214421/how-to-install-the-mpeg-4-aac-decoder-and-the-h-264-decoder
+# 참고  
+  [output file을 mp4로 설정 할 때 ubuntu 에서 실행이 안되는 경우](https://askubuntu.com/questions/214421/how-to-install-the-mpeg-4-aac-decoder-and-the-h-264-decoder)

@@ -3,10 +3,9 @@ layout: single
 title: "Github Jekyll blog posting하기"
 last_modified_at: 2022-11-01
 categories: blog
-tag: [blog]
+tags: [blog, markdown, jekyll, github blog, image]
 ---
-
-# Blog 설정
+## Github blog setting
 
 이전에 github과 jekyll을 통한 간단한 blog를 만들어 잘 활용하고 있었는데, 쓰다보니 여러 기능들을 추가하고 조금 더 있어보이는 블로그를 만들고 싶어졌다.  
 
