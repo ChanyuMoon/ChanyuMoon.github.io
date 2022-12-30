@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "CV"
+    url: /cv/
   - title: "Category"
     url: /categories/
   - title: "Tag"
