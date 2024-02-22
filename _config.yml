@@ -22,6 +22,8 @@ subtitle                 : ""
 name                     : "Chanyu Moon"
 description              : "place to note things i've learned"
 url                      : "https://ChanyuMoon.github.io"
+# "https://chanyumoon.notion.site/chanyumoon/632bb027732948ef949917818e682851"
+
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/ChanyuMoon/ChanyuMoon.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -108,51 +110,66 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Like to learn and discover new things."
   location         : "Rebulic of Korea"
-  email            : # "anscksdb0127@gmail.com"
+  # email            : "anscksdb0127@dgist.ac.kr"
   links:
+    - label: "CV"
+      icon: "fas fa-fw fa-file"
+      url: "https://drive.google.com/file/d/11CIOvoNnBn-BhGXhLHaX15--O9znweOu/view?usp=sharing"  
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:anscksdb0127@email.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: mailto:anscksdb0127@dgist.ac.kr
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ChanyuMoon"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/chanyu_moon"
+    - label: "linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/chanyu-moon-714727229/"      
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+      # url:
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+      # url:
+    # - label: "GitLab"
+    #   icon: "fab fa-fw fa-gitlab"
+      # url:
+    # - label: "Bitbucket"
+    #   icon: "fab fa-fw fa-bitbucket"
+      # url:
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/chanyu_moon"
 
 # Site Footer
 footer:
   links:
+    - label: "CV"
+      icon: "fas fa-fw fa-file"
+      url: "https://drive.google.com/file/d/11CIOvoNnBn-BhGXhLHaX15--O9znweOu/view?usp=sharing"  
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:anscksdb0127@email.com
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: mailto:anscksdb0127@dgist.ac.kr
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ChanyuMoon"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
+    - label: "linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/chanyu-moon-714727229/"      
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
       # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
       # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/chanyu_moon"
+    # - label: "GitLab"
+    #   icon: "fab fa-fw fa-gitlab"
+      # url:
+    # - label: "Bitbucket"
+    #   icon: "fab fa-fw fa-bitbucket"
+      # url:
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/chanyu_moon"
 
 
 # Reading Files
