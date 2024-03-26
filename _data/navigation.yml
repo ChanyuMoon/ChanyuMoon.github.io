@@ -1,5 +1,7 @@
 # main links
 main:
+  # - title: "CV"
+  #   url: /cv/
   - title: "Rescent Posts"
     url: /  
   - title: "Category"

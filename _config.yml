@@ -114,7 +114,7 @@ author:
   links:
     - label: "CV"
       icon: "fas fa-fw fa-file"
-      url: "https://drive.google.com/file/d/11CIOvoNnBn-BhGXhLHaX15--O9znweOu/view?usp=sharing"  
+      url: "https://chanyumoon.github.io/markdown-cv/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:anscksdb0127@dgist.ac.kr
@@ -145,7 +145,7 @@ footer:
   links:
     - label: "CV"
       icon: "fas fa-fw fa-file"
-      url: "https://drive.google.com/file/d/11CIOvoNnBn-BhGXhLHaX15--O9znweOu/view?usp=sharing"  
+      url: "https://chanyumoon.github.io/markdown-cv/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:anscksdb0127@dgist.ac.kr
