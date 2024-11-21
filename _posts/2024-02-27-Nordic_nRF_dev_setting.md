@@ -2,7 +2,9 @@
 layout: single
 title: Nordic development setting in Mac
 categories: Embedded_systems
-tags: [Nordic, Embedded_systems]
+tags:
+  - Nordic
+  - Embedded_systems
 modified: 2024-02-27
 ---
 
@@ -18,7 +20,7 @@ modified: 2024-02-27
 
 우선, 영상에서와 같이 nRF Command line tools를 다운 받고, nRF tools와 Jlink를 모두 설치한다. 
 
-![nRF command tools 설치 (mac)](/assets/images/2024-02-27-Nordic_nRF_dev_setting/nRF_command_line_tool_insatll.png) 
+![nRF command tools 설치 (mac)](/assets/images/2024-02-27-Nordic_nRF_dev_setting/nRF_command_line_tool_install.png) 
 
 이후 vscode에서 nRFconnect for VS code extension Pack을 설치 하면 준비는 다 되었다.
 
