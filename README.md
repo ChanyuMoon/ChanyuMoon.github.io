@@ -5,6 +5,7 @@ Check out my cv / [github](https://github.com/ChanyuMoon) / [scholar](https://sc
 ### Research
 I am interested in the brain. I want to understand how our brain performs cognitive functions and motor control, and why patients with brain disorders such as Parkinson's disease experience certain symptoms.  
 \* states the Equal Contribution  
+
 **OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment**  
 Junhyun Park\*, **Chanyu Moon\***, Donghwan Lee, Kyungsu Kim, Minho Hwang  
 arXiv, 2025  
