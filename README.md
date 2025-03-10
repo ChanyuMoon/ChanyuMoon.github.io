@@ -8,14 +8,10 @@ Check out my cv / [github](https://github.com/ChanyuMoon) / [scholar](https://sc
 I am interested in the brain. I want to understand how our brain performs cognitive functions and motor control, and why patients with brain disorders such as Parkinson's disease experience certain symptoms.  
 \* states the Equal Contribution  
 
-<div style="font-size:16x; margin:0;">
-    **OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment** 
-</div>
-<div style="font-size:14px; margin:0;">
-    Junhyun Park\*, **Chanyu Moon\***, Donghwan Lee, Kyungsu Kim, Minho Hwang  
-    arXiv, 2025  
-    [arXiv](https://arxiv.org/pdf/2503.01794)  
-</div>
+**OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment** 
+Junhyun Park\*, **Chanyu Moon\***, Donghwan Lee, Kyungsu Kim, Minho Hwang  
+arXiv, 2025  
+[arXiv](https://arxiv.org/pdf/2503.01794)  
 
 ![image](assets/img/1_offclip_figure.png)  
 <div style="font-size:14px; margin:0;">
