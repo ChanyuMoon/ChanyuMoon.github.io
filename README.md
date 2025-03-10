@@ -14,5 +14,9 @@ Junhyun Park\*, **Chanyu Moon\***, Donghwan Lee, Kyungsu Kim, Minho Hwang
 arXiv, 2025  
 [arXiv](https://arxiv.org/pdf/2503.01794)  
 ![image](assets/img/1_offclip_figure.png)  
-<span style="font-size:14px;">Contrastive Language-Image Pre-Training (CLIP) has enabled zero-shot classification in radiology. However, conventional contrastive learning struggles with normal case detection due to its strict intra-sample alignment. To address this, we propose OFF-CLIP, a contrastive learning refinement that improves normal detection by introducing an off-diagonal term loss to enhance normal sample clustering and by implementing sentence-level text filtering to mitigate false negatives by removing misaligned normal statements from abnormal reports. Additionally, OFF-CLIP can be applied to radiology CLIP models without requiring any architectural modifications. Compared to the current state-of-the-art model, CARZero, OFF-CLIP significantly improves normal classification (0.61 AUC increase on VinDr-CXR). Furthermore, our model enhances zero-shot grounding by improving pointing game accuracy.</span>
+Contrastive Language-Image Pre-Training (CLIP) has enabled zero-shot classification in radiology. However, conventional contrastive learning struggles with normal case detection due to its strict intra-sample alignment. To address this, we propose OFF-CLIP, a contrastive learning refinement that improves normal detection by introducing an off-diagonal term loss to enhance normal sample clustering and by implementing sentence-level text filtering to mitigate false negatives by removing misaligned normal statements from abnormal reports. Additionally, OFF-CLIP can be applied to radiology CLIP models without requiring any architectural modifications. Compared to the current state-of-the-art model, CARZero, OFF-CLIP significantly improves normal classification (0.61 AUC increase on VinDr-CXR). Furthermore, our model enhances zero-shot grounding by improving pointing game accuracy.
 
+
+<div style="font-size:30px; margin:0;">
+    첫 번째 박스 (마진 제거)
+</div>
