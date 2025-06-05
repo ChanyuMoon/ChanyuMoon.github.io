@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/ChanyuMoon/ChanyuMoon.github.io.git
+	branch = gh-pages
