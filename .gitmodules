@@ -2,3 +2,6 @@
 	path = public
 	url = https://github.com/ChanyuMoon/ChanyuMoon.github.io.git
 	branch = gh-pages
+[submodule "themes/hugo-profile"]
+	path = themes/hugo-profile
+	url = https://github.com/gurusabarish/hugo-profile.git
