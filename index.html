@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=/fav.png type="image/gif">
+<link rel="icon" href=/images/cym-logo.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,15 +29,17 @@
 
 
 
-<meta property="og:url" content="https://example.org/">
-  <meta property="og:site_name" content="My New Hugo Site">
-  <meta property="og:title" content="My New Hugo Site">
+<meta property="og:url" content="https://hugo-profile.netlify.app/">
+  <meta property="og:site_name" content="Chanyu Moon">
+  <meta property="og:title" content="Chanyu Moon">
+  <meta property="og:description" content="Log of Chanyu Moon.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:title" content="Chanyu Moon">
+  <meta name="twitter:description" content="Log of Chanyu Moon.">
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -101,7 +103,7 @@
 
 
 
-<meta name="description" content=ZgotmplZ>
+<meta name="description" content=Log&#32;of&#32;Chanyu&#32;Moon.>
 <link rel="stylesheet" href="/css/index.css" media="all">
 <link rel="stylesheet" href="/css/projects.css" media="all">
 
@@ -113,7 +115,7 @@
   
 
   <title>
-My New Hugo Site
+Chanyu Moon
 
   </title>
 </head>
@@ -143,14 +145,40 @@ My New Hugo Site
 
 
 
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
 
 <header id="profileHeader">
-    <nav class="pt-3 navbar navbar-expand-lg ">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
             <a class="navbar-brand primary-font text-wrap" href="/">
                 
-                
+                <img src="/images/cym-logo.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Chanyu Moon
                 
             </a>
 
@@ -183,7 +211,21 @@ My New Hugo Site
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
 
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">
+                            Publications
+                        </a>
+                    </li>
                     
 
                     
@@ -191,9 +233,26 @@ My New Hugo Site
                     
 
                     
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
 
                     
 
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
                     
                     
 
@@ -228,7 +287,546 @@ My New Hugo Site
     </nav>
 </header>
 <div id="content">
+<section id="hero" class="py-5 align-middle">
+    <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 content animate" id="primary-font">
+                <span class="subtitle">
+                    Hi, my name is
+                </span>
+                <h1>
+                    Chanyu Moon.
+                </h1>
+                <h2>
+                    I’m a graduate researcher.
+                </h2>
+                <p class="hero-content">
+                    As a Researcher, I&rsquo;m Interested in Natural &amp; Artificial Intelligence and question how they can be coaporated to solve real-world problems.
+                </p>
+                <div class="row">
+                    <div class="col-auto h-100">
+                        
+                        <a href="#" class="btn" download
+			  >
+                            Resume
+                        </a>
+                        
+                    </div>
+                    <div class="col-auto px-0 h-100"><span>
+    
+    <span class="px-1">
+        <a href="https://github.com/ChanyuMoon"
+             target="_blank" 
+            class="btn social-icon"
+        >
+            <i class="fab fa-github"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/chanyu-moon-714727229/"
+             target="_blank" 
+            class="btn social-icon"
+        >
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://scholar.google.com/citations?hl=ko&amp;user=l9m2FnQAAAAJ&amp;view_op=list_works&amp;gmla=AOv-ny9DsJGv4hvrmkwzkQ1cEgpMwCDR970UmxZ3N7SV3a4Dlm_iVlBUXitqVo5yJLbwvRNc-Mauupg--xHyhdqGDeWMOyOZKwUoq1-PnUErZTnulV4-h1cMdQ"
+             target="_blank" 
+            class="btn social-icon"
+        >
+            <i class="fas fa-graduation-cap"></i>
+        </a>
+    </span>
+    
 
+    
+</span>
+</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
+                        <img src="/images/headshot.jpg"
+                            class="img-thumbnail mx-auto"
+                            alt=""
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hero-bottom-svg d-md-block d-lg-block d-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
+            <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
+                <rect id="Rectangle_2206" data-name="Rectangle 2206" width="12" height="2" rx="1"
+                    transform="translate(391 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2271" data-name="Rectangle 2271" width="12" height="2" rx="1"
+                    transform="translate(391 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2238" data-name="Rectangle 2238" width="12" height="2" rx="1"
+                    transform="translate(391 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2278" data-name="Rectangle 2278" width="12" height="2" rx="1"
+                    transform="translate(391 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2222" data-name="Rectangle 2222" width="12" height="2" rx="1"
+                    transform="translate(391 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2272" data-name="Rectangle 2272" width="12" height="2" rx="1"
+                    transform="translate(391 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2241" data-name="Rectangle 2241" width="12" height="2" rx="1"
+                    transform="translate(391 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2288" data-name="Rectangle 2288" width="12" height="2" rx="1"
+                    transform="translate(391 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2214" data-name="Rectangle 2214" width="12" height="2" rx="1"
+                    transform="translate(499 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2289" data-name="Rectangle 2289" width="12" height="2" rx="1"
+                    transform="translate(499 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2256" data-name="Rectangle 2256" width="12" height="2" rx="1"
+                    transform="translate(499 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2290" data-name="Rectangle 2290" width="12" height="2" rx="1"
+                    transform="translate(499 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2231" data-name="Rectangle 2231" width="12" height="2" rx="1"
+                    transform="translate(499 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2291" data-name="Rectangle 2291" width="12" height="2" rx="1"
+                    transform="translate(499 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2257" data-name="Rectangle 2257" width="12" height="2" rx="1"
+                    transform="translate(499 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2292" data-name="Rectangle 2292" width="12" height="2" rx="1"
+                    transform="translate(499 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2210" data-name="Rectangle 2210" width="12" height="2" rx="1"
+                    transform="translate(445 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2279" data-name="Rectangle 2279" width="12" height="2" rx="1"
+                    transform="translate(445 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2248" data-name="Rectangle 2248" width="12" height="2" rx="1"
+                    transform="translate(445 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2280" data-name="Rectangle 2280" width="12" height="2" rx="1"
+                    transform="translate(445 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2226" data-name="Rectangle 2226" width="12" height="2" rx="1"
+                    transform="translate(445 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2281" data-name="Rectangle 2281" width="12" height="2" rx="1"
+                    transform="translate(445 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2249" data-name="Rectangle 2249" width="12" height="2" rx="1"
+                    transform="translate(445 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2293" data-name="Rectangle 2293" width="12" height="2" rx="1"
+                    transform="translate(445 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2219" data-name="Rectangle 2219" width="12" height="2" rx="1"
+                    transform="translate(553 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2310" data-name="Rectangle 2310" width="12" height="2" rx="1"
+                    transform="translate(553 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2262" data-name="Rectangle 2262" width="12" height="2" rx="1"
+                    transform="translate(553 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2311" data-name="Rectangle 2311" width="12" height="2" rx="1"
+                    transform="translate(553 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2232" data-name="Rectangle 2232" width="12" height="2" rx="1"
+                    transform="translate(553 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2312" data-name="Rectangle 2312" width="12" height="2" rx="1"
+                    transform="translate(553 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2263" data-name="Rectangle 2263" width="12" height="2" rx="1"
+                    transform="translate(553 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2313" data-name="Rectangle 2313" width="12" height="2" rx="1"
+                    transform="translate(553 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2209" data-name="Rectangle 2209" width="12" height="2" rx="1"
+                    transform="translate(418 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2273" data-name="Rectangle 2273" width="12" height="2" rx="1"
+                    transform="translate(418 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2242" data-name="Rectangle 2242" width="12" height="2" rx="1"
+                    transform="translate(418 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2282" data-name="Rectangle 2282" width="12" height="2" rx="1"
+                    transform="translate(418 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2223" data-name="Rectangle 2223" width="12" height="2" rx="1"
+                    transform="translate(418 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2274" data-name="Rectangle 2274" width="12" height="2" rx="1"
+                    transform="translate(418 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2243" data-name="Rectangle 2243" width="12" height="2" rx="1"
+                    transform="translate(418 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2294" data-name="Rectangle 2294" width="12" height="2" rx="1"
+                    transform="translate(418 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2217" data-name="Rectangle 2217" width="12" height="2" rx="1"
+                    transform="translate(526 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2314" data-name="Rectangle 2314" width="12" height="2" rx="1"
+                    transform="translate(526 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2258" data-name="Rectangle 2258" width="12" height="2" rx="1"
+                    transform="translate(526 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2315" data-name="Rectangle 2315" width="12" height="2" rx="1"
+                    transform="translate(526 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2233" data-name="Rectangle 2233" width="12" height="2" rx="1"
+                    transform="translate(526 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2316" data-name="Rectangle 2316" width="12" height="2" rx="1"
+                    transform="translate(526 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2259" data-name="Rectangle 2259" width="12" height="2" rx="1"
+                    transform="translate(526 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2317" data-name="Rectangle 2317" width="12" height="2" rx="1"
+                    transform="translate(526 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2211" data-name="Rectangle 2211" width="12" height="2" rx="1"
+                    transform="translate(472 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2295" data-name="Rectangle 2295" width="12" height="2" rx="1"
+                    transform="translate(472 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2250" data-name="Rectangle 2250" width="12" height="2" rx="1"
+                    transform="translate(472 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2296" data-name="Rectangle 2296" width="12" height="2" rx="1"
+                    transform="translate(472 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2227" data-name="Rectangle 2227" width="12" height="2" rx="1"
+                    transform="translate(472 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2297" data-name="Rectangle 2297" width="12" height="2" rx="1"
+                    transform="translate(472 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2251" data-name="Rectangle 2251" width="12" height="2" rx="1"
+                    transform="translate(472 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2298" data-name="Rectangle 2298" width="12" height="2" rx="1"
+                    transform="translate(472 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2221" data-name="Rectangle 2221" width="12" height="2" rx="1"
+                    transform="translate(580 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2318" data-name="Rectangle 2318" width="12" height="2" rx="1"
+                    transform="translate(580 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2264" data-name="Rectangle 2264" width="12" height="2" rx="1"
+                    transform="translate(580 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2319" data-name="Rectangle 2319" width="12" height="2" rx="1"
+                    transform="translate(580 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2236" data-name="Rectangle 2236" width="12" height="2" rx="1"
+                    transform="translate(580 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2320" data-name="Rectangle 2320" width="12" height="2" rx="1"
+                    transform="translate(580 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2265" data-name="Rectangle 2265" width="12" height="2" rx="1"
+                    transform="translate(580 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2321" data-name="Rectangle 2321" width="12" height="2" rx="1"
+                    transform="translate(580 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2207" data-name="Rectangle 2207" width="12" height="2" rx="1"
+                    transform="translate(396 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2270" data-name="Rectangle 2270" width="12" height="2" rx="1"
+                    transform="translate(396 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2239" data-name="Rectangle 2239" width="12" height="2" rx="1"
+                    transform="translate(396 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2283" data-name="Rectangle 2283" width="12" height="2" rx="1"
+                    transform="translate(396 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2224" data-name="Rectangle 2224" width="12" height="2" rx="1"
+                    transform="translate(396 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2275" data-name="Rectangle 2275" width="12" height="2" rx="1"
+                    transform="translate(396 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2244" data-name="Rectangle 2244" width="12" height="2" rx="1"
+                    transform="translate(396 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2299" data-name="Rectangle 2299" width="12" height="2" rx="1"
+                    transform="translate(396 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2215" data-name="Rectangle 2215" width="12" height="2" rx="1"
+                    transform="translate(504 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2300" data-name="Rectangle 2300" width="12" height="2" rx="1"
+                    transform="translate(504 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2252" data-name="Rectangle 2252" width="12" height="2" rx="1"
+                    transform="translate(504 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2301" data-name="Rectangle 2301" width="12" height="2" rx="1"
+                    transform="translate(504 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2228" data-name="Rectangle 2228" width="12" height="2" rx="1"
+                    transform="translate(504 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2302" data-name="Rectangle 2302" width="12" height="2" rx="1"
+                    transform="translate(504 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2253" data-name="Rectangle 2253" width="12" height="2" rx="1"
+                    transform="translate(504 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2303" data-name="Rectangle 2303" width="12" height="2" rx="1"
+                    transform="translate(504 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2212" data-name="Rectangle 2212" width="12" height="2" rx="1"
+                    transform="translate(450 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2284" data-name="Rectangle 2284" width="12" height="2" rx="1"
+                    transform="translate(450 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2245" data-name="Rectangle 2245" width="12" height="2" rx="1"
+                    transform="translate(450 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2285" data-name="Rectangle 2285" width="12" height="2" rx="1"
+                    transform="translate(450 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2229" data-name="Rectangle 2229" width="12" height="2" rx="1"
+                    transform="translate(450 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2286" data-name="Rectangle 2286" width="12" height="2" rx="1"
+                    transform="translate(450 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2246" data-name="Rectangle 2246" width="12" height="2" rx="1"
+                    transform="translate(450 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2304" data-name="Rectangle 2304" width="12" height="2" rx="1"
+                    transform="translate(450 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2218" data-name="Rectangle 2218" width="12" height="2" rx="1"
+                    transform="translate(558 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2322" data-name="Rectangle 2322" width="12" height="2" rx="1"
+                    transform="translate(558 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2266" data-name="Rectangle 2266" width="12" height="2" rx="1"
+                    transform="translate(558 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2323" data-name="Rectangle 2323" width="12" height="2" rx="1"
+                    transform="translate(558 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2234" data-name="Rectangle 2234" width="12" height="2" rx="1"
+                    transform="translate(558 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2324" data-name="Rectangle 2324" width="12" height="2" rx="1"
+                    transform="translate(558 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2267" data-name="Rectangle 2267" width="12" height="2" rx="1"
+                    transform="translate(558 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2325" data-name="Rectangle 2325" width="12" height="2" rx="1"
+                    transform="translate(558 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2208" data-name="Rectangle 2208" width="12" height="2" rx="1"
+                    transform="translate(423 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2276" data-name="Rectangle 2276" width="12" height="2" rx="1"
+                    transform="translate(423 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2240" data-name="Rectangle 2240" width="12" height="2" rx="1"
+                    transform="translate(423 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2287" data-name="Rectangle 2287" width="12" height="2" rx="1"
+                    transform="translate(423 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2225" data-name="Rectangle 2225" width="12" height="2" rx="1"
+                    transform="translate(423 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2277" data-name="Rectangle 2277" width="12" height="2" rx="1"
+                    transform="translate(423 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2247" data-name="Rectangle 2247" width="12" height="2" rx="1"
+                    transform="translate(423 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2305" data-name="Rectangle 2305" width="12" height="2" rx="1"
+                    transform="translate(423 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2216" data-name="Rectangle 2216" width="12" height="2" rx="1"
+                    transform="translate(531 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2326" data-name="Rectangle 2326" width="12" height="2" rx="1"
+                    transform="translate(531 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2260" data-name="Rectangle 2260" width="12" height="2" rx="1"
+                    transform="translate(531 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2327" data-name="Rectangle 2327" width="12" height="2" rx="1"
+                    transform="translate(531 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2235" data-name="Rectangle 2235" width="12" height="2" rx="1"
+                    transform="translate(531 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2328" data-name="Rectangle 2328" width="12" height="2" rx="1"
+                    transform="translate(531 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2261" data-name="Rectangle 2261" width="12" height="2" rx="1"
+                    transform="translate(531 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2329" data-name="Rectangle 2329" width="12" height="2" rx="1"
+                    transform="translate(531 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2213" data-name="Rectangle 2213" width="12" height="2" rx="1"
+                    transform="translate(477 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2306" data-name="Rectangle 2306" width="12" height="2" rx="1"
+                    transform="translate(477 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2254" data-name="Rectangle 2254" width="12" height="2" rx="1"
+                    transform="translate(477 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2307" data-name="Rectangle 2307" width="12" height="2" rx="1"
+                    transform="translate(477 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2230" data-name="Rectangle 2230" width="12" height="2" rx="1"
+                    transform="translate(477 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2308" data-name="Rectangle 2308" width="12" height="2" rx="1"
+                    transform="translate(477 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2255" data-name="Rectangle 2255" width="12" height="2" rx="1"
+                    transform="translate(477 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2309" data-name="Rectangle 2309" width="12" height="2" rx="1"
+                    transform="translate(477 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2220" data-name="Rectangle 2220" width="12" height="2" rx="1"
+                    transform="translate(585 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2330" data-name="Rectangle 2330" width="12" height="2" rx="1"
+                    transform="translate(585 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2268" data-name="Rectangle 2268" width="12" height="2" rx="1"
+                    transform="translate(585 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2331" data-name="Rectangle 2331" width="12" height="2" rx="1"
+                    transform="translate(585 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2237" data-name="Rectangle 2237" width="12" height="2" rx="1"
+                    transform="translate(585 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2332" data-name="Rectangle 2332" width="12" height="2" rx="1"
+                    transform="translate(585 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2269" data-name="Rectangle 2269" width="12" height="2" rx="1"
+                    transform="translate(585 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2333" data-name="Rectangle 2333" width="12" height="2" rx="1"
+                    transform="translate(585 1588) rotate(-180)" fill="#282f49" />
+            </g>
+        </svg>
+    </div>
+    
+</section>
+
+<section id="education" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Education</h3>
+        <div class="row justify-content-center py-5">
+            
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2024.02 - present</small>
+                                </div>
+                                <h5 class="card-title">M.S./Ph.D. Integrated Course</h5>
+                                
+                                
+                                <a href="https://www.dgist.ac.kr/" target="_blank">
+                                    <h6>
+                                    Daegu Gyeongbuk Institute of Science and Technology (DGIST)
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    Communication and Signal Processing Lab (CSP Lab)
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2020.02 - 2024.02</small>
+                                </div>
+                                <h5 class="card-title">B.S. in Electrical Engineering and Computer Science</h5>
+                                
+                                
+                                <a href="https://www.dgist.ac.kr/" target="_blank">
+                                    <h6>
+                                    Daegu Gyeongbuk Institute of Science and Technology (DGIST)
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    Deans List (4.0 or higher out of 4.3)
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2017.03 - 2020.02</small>
+                                </div>
+                                <h5 class="card-title">High School</h5>
+                                
+                                
+                                <a href="https://school.busanedu.net/bss-h/main.do" target="_blank">
+                                    <h6>
+                                    Busan Science High School
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    Club leader of Brain science club Neuro.
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section id="experience" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Publications</h3>
+        <h6 class="text-center">*: Equal contribution, †: Corresponding author</h6>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div 
+                                class="nav-link active bg-transparent" 
+                                aria-selected="true" 
+                                role="tab" 
+                                data-bs-toggle="pill"
+                                id='Preprint--tab'
+                                data-bs-target='#pills-Preprint-'
+                                aria-controls='Preprint-' 
+                            >
+                                Preprint
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                    <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="pills-tabContent">
+                        
+                        
+                        <div 
+                            class="tab-pane fade show active bg-transparent" 
+                            role="tabpanel"
+                            id='pills-Preprint-'
+                            aria-labelledby='pills-Preprint--tab'
+                        >
+                            <div>
+                                <span class="h4">OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment</span>
+                                <small>-</small>
+                                <div class="pb-1">
+                                    <div class="text-black" style="font-size:.9rem;">Junhyun Park*, <ins>Chanyu Moon*</ins>, Donghwan Lee, Kyungsu Kim†, Minho Hwang†</div>
+                                    <div class="text-primary" style="font-size:.9rem;">ArXiv (2025)</div>                                    
+                                    <div class="text-black" style="font-size:.9rem;"></div>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://arxiv.org/abs/2503.01794 target="_blank">
+                                        Go to paper page 
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            In this paper, we propose a simple yet effective method to improve the normal detection confidence of radiology CLIP models.
+Our method, OFF-CLIP, automatically adjusts the off-diagonal term of the CLIP loss function to enhance the model&rsquo;s ability to distinguish normal from abnormal images.
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Get in Touch</h3>
+        <div class="px-0 px-md-5 px-lg-5">
+            <div class="row justify-content-center px-md-5">
+                <div class="col-md-8 py-3">
+                    <div class="text-center">
+                        My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+                    </div>
+                    
+                    <div class="text-center pt-3">
+                        <a 
+                            href='
+                                    mailto:moonchanyu@gmail.com
+                                  '
+                            target="_blank"
+                            class="btn"
+                        >
+                            Mail me
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact-form-status"></div>
+</section>
 
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -246,10 +844,81 @@ My New Hugo Site
   </div><footer>
     
  
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/20250609-164006_test/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="My first blog post">My first blog post</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><!-- Write here -->
+<h1 id="about-the-blog-tap">About the blog tap</h1>
+<p>In this tap, I&rsquo;ll share the understanding and ideas I studied during my research.<br>
+This will be helpful for me for various reasons.</p>
+<p>First, writing my understanding as a post will help me test whether I understand the concept.<br>
+Secondly, it will help me get used to English …</p></!--></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 9, 2025</span>
+                    <a href="/blogs/20250609-164006_test/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
 
 <div class="text-center pt-2">
     
+    <span class="px-1">
+        <a href="https://github.com/ChanyuMoon" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
 
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/chanyu-moon-714727229/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
     
 
     
@@ -261,7 +930,14 @@ My New Hugo Site
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             
-            &copy; 2025  All Rights Reserved
+                <div class="pb-2">
+                    <a href="https://hugo-profile.netlify.app/" title="Chanyu Moon">
+                        <img alt="Footer logo" src="/images/cym-logo.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All rights reserved
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -316,6 +992,8 @@ My New Hugo Site
 
 
 
+
+css/index.css
 
 
   <section id="search-content" class="py-2">

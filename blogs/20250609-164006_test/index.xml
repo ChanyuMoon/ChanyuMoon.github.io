@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My first blog post on Chanyu Moon</title>
+    <link>https://hugo-profile.netlify.app/blogs/20250609-164006_test/</link>
+    <description>Recent content in My first blog post on Chanyu Moon</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://hugo-profile.netlify.app/blogs/20250609-164006_test/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
