@@ -176,7 +176,7 @@ params:
         featuredLink:
           enable: true
           name: "Go to paper page"
-          url: "https://arxiv.org/abs/2503.01794"
+          url: "https://arxiv.org/pdf/2503.01794"
         content: |-
           In this paper, we propose a simple yet effective method to improve the normal detection confidence of radiology CLIP models. 
           Our method, OFF-CLIP, automatically adjusts the off-diagonal term of the CLIP loss function to enhance the model's ability to distinguish normal from abnormal images.
