@@ -167,20 +167,32 @@ params:
     items:
       - job: "OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment"
         # company: "International Conference"
-        company: "Preprint"
+        company: "International Conference"
         # companyUrl: "https://facebook.com"
         author: "Junhyun Park*, <ins>Chanyu Moon*</ins>, Donghwan Lee, Kyungsu Kim†, Minho Hwang†"
         # publisher: "MICCAI (2025) [Medical AI Top Conference]"
-        publisher: "ArXiv (2025)"
-        # note: "Early Accepted paper [<ins>**top 9%**</ins> of all submissions]"
+        publisher: "Medical Image Computing and Computer Assisted Intervention (MICCAI) - 2025.05"
+        note: "Early Accepted paper [<ins>**top 9%**</ins> of all submissions]"
         featuredLink:
           enable: true
-          name: "Go to paper page"
+          name: "read paper"
           url: "https://arxiv.org/pdf/2503.01794"
         content: |-
           In this paper, we propose a simple yet effective method to improve the normal detection confidence of radiology CLIP models. 
           Our method, OFF-CLIP, automatically adjusts the off-diagonal term of the CLIP loss function to enhance the model's ability to distinguish normal from abnormal images.
-
+      
+      - job: "A Study on the Trends of Adaptive Deep Brain Stimulation in Parkinson's Disease"
+        company: "Domestic Conference"
+        author: "Chanyu Moon, Ji-Woong Choi†"
+        publisher: "한국통신학회 학술대회논문집 - 2025.02"
+        note: An oral presentation was conducted at the DGIST special session.
+        featuredLink:
+            enable: true
+            name: "read paper"
+            url: "https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12132791"
+        content: |-
+          파킨슨 병 (Parkinson’s disease; PD) 환자의 증상 완화법인 개방형 뇌 심부 자극(Open-loop Deep Brain Stimulation; DBS)의 한계를 극복하기 위해 적응형 뇌 심부 자극(adaptive Deep Brain Stimulation; aDBS)이 도입되어 각광받고 있다. 
+          본 연구에서는 PD 환자에서 aDBS 의 입력 신호와 자극 파라미터 조절에  관한 최신 연구 동향을 소개한다.
 
   # ───────────────────────────────────────────────────────────────────────────
   # 3-5) Education 섹션
