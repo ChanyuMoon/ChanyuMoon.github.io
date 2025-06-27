@@ -4,7 +4,7 @@
         <h3 class="text-center">{{ .Site.Params.experience.title | default "Experience" }}</h3>
         <h6 class="text-center">{{ .Site.Params.experience.subtitle | default "Experience" }}</h6>
         <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+            <div class="col-sm-12 col-md-10 col-lg-10 py-5">
                 <div class="experience-container px-3 pt-2">
                     <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
                         {{ range $index, $element := .Site.Params.experience.items }}
@@ -41,89 +41,59 @@
                     </ul>
                     <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="pills-tabContent">
                         {{ range $index, $element := .Site.Params.experience.items }}
-                        {{ if (eq $index 0) }}
                         <div 
-                            class="tab-pane fade show active bg-transparent" 
+                            class="tab-pane fade {{ if eq $index 0 }}show active{{ end }} bg-transparent" 
                             role="tabpanel"
                             id='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
                             aria-labelledby='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
                         >
-                            <div>
-                                <span class="h4">{{ .job }}</span>
-                                <small>-</small>
-                                <div class="pb-1">
-                                    <div class="text-black" style="font-size:.9rem;">{{ .author | markdownify}}</div>
-                                    {{- with .publisher }}
-                                    <div class="text-primary" style="font-size:.9rem;">{{ . | markdownify}}</div>    
-                                    {{- end }}                                    
-                                    <div class="text-black" style="font-size:.9rem;">{{ .note | markdownify}}</div>
-                                    <!-- {{ if .info.enable | default true }}
-                                    <span class="p-2">
-                                        <span 
-                                            style="cursor: pointer;" 
-                                            data-bs-toggle="tooltip" 
-                                            data-bs-placement="top" 
-                                            data-bs-original-title={{ .info.content | default (print "Working as a " .job " at " .company ) }}
-                                        >
-                                            <i class="fas fa-info-circle fa-xs"></i>
-                                        </span>
-                                    </span>
-                                    {{ end }} -->
-                                </div>
-
-                                {{ if .featuredLink.enable | default false }}
-                                <div class="py-2 featuredLink">
-                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
-                                        {{ .featuredLink.name | default "Featured Link" }} 
-                                    </a>
-                                </div>
-                                {{ end }}
-                            </div>
-
-                            {{ .content | markdownify}}
-                        </div>
-                        {{ else }}
-                        <div 
-                            class="tab-pane fade bg-transparent" 
-                            role="tabpanel"
-                            id='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}'
-                            aria-labelledby='pills-{{ replace .company " " "-" }}-{{ replace .date " " "-" }}-tab'
-                        >
-                            <div>
-                                <span class="h4">{{ .job }}</span>
-                                <small>-</small>
-                                <a href="{{ .companyUrl }}" target="_blank">{{ .company }}</a>
-                                
-                                <div class="pb-1">
-                                    <small>{{ .date }}</small>
-                                    {{ if .info.enable | default true }}
-                                    <span class="p-2">
-                                        <span 
-                                            style="cursor: pointer;" 
-                                            data-bs-toggle="tooltip" 
-                                            data-bs-placement="top" 
-                                            data-bs-original-title={{ .info.content | default (print "Worked as a " .job " at " .company ) }}
-                                        > 
-                                            <i class="fas fa-info-circle fa-xs"></i>
-                                        </span>
-                                    </span>
+                            {{ if .publications }}
+                                {{ $pubCount := len .publications }}
+                                <div>
+                                    {{ range $i, $pub := .publications }}
+                                        <div class="publication-block d-flex align-items-start py-3">
+                                            {{ if $pub.image }}
+                                                <img src="{{ $pub.image }}" alt="thumbnail" class="pub-thumbnail me-3" style="width:260px;max-width:40vw;max-height:140px;object-fit:cover;border-radius:8px;">
+                                            {{ end }}
+                                            <div class="pub-content flex-grow-1">
+                                                <span class="h5">{{ $pub.job }}</span>
+                                                <div class="author" style="font-size:.9rem;">{{ $pub.author | markdownify }}</div>
+                                                {{- with $pub.publisher }}
+                                                    <div class="text-primary" style="font-size:.9rem;">{{ . | markdownify }}</div>
+                                                {{- end }}
+                                                <div class="note" style="font-size:.9rem;">{{ $pub.note | markdownify }}</div>
+                                                {{ if $pub.featuredLink.enable | default false }}
+                                                    <div class="py-2 featuredLink">
+                                                        <a class="p-2 px-4 btn btn-outline-primary btn-sm" href="{{ $pub.featuredLink.url | default "#" }}" target="_blank">
+                                                            {{ $pub.featuredLink.name | default "Featured Link" }}
+                                                        </a>
+                                                    </div>
+                                                {{ end }}
+                                                <div>{{ $pub.content | markdownify }}</div>
+                                            </div>
+                                        </div>
                                     {{ end }}
                                 </div>
-                                
-                                {{ if .featuredLink.enable | default false }}
-                                <div class="py-2 featuredLink">
-                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
-                                        {{ .featuredLink.name | default "Featured Link" }} 
-                                    </a>
+                            {{ else }}
+                                <div class="publication-block py-3">
+                                    <span class="h4">{{ .job }}</span>
+                                    <small>-</small>
+                                    <div class="author" style="font-size:.9rem;">{{ .author | markdownify}}</div>
+                                    {{- with .publisher }}
+                                        <div class="text-primary" style="font-size:.9rem;">{{ . | markdownify}}</div>
+                                    {{- end }}
+                                    <div class="note" style="font-size:.9rem;">{{ .note | markdownify}}</div>
+                                    {{ if .featuredLink.enable | default false }}
+                                        <div class="py-2 featuredLink">
+                                            <a class="p-2 px-4 btn btn-outline-primary btn-sm" href="{{ .featuredLink.url | default "#" }}" target="_blank">
+                                                {{ .featuredLink.name | default "Featured Link" }}
+                                            </a>
+                                        </div>
+                                    {{ end }}
+                                    <div>{{ .content | markdownify }}</div>
                                 </div>
-                                {{ end }}
-                            </div>
-
-                            <div class="pt-2">
-                                {{ .content | markdownify}}
-                            </div>
+                            {{ end }}
                         </div>
-                        {{ end }}
                         {{ end }}
                     </div>
                 </div>

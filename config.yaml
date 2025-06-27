@@ -91,7 +91,7 @@ params:
 
     enableSeparator: false
 
-    # 테마가 제공하는 “About / Experience / Projects / …” 메뉴를 자동으로 만들어 줍니다.
+    # 테마가 제공하는 "About / Experience / Projects / ..." 메뉴를 자동으로 만들어 줍니다.
     # false 로 바꾸면 해당 메뉴 항목이 네비게이션에서 사라집니다.
     menus:
       disableAbout: false
@@ -108,7 +108,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Chanyu Moon."
-    subtitle: "I’m a graduate researcher."
+    subtitle: "I'm a graduate researcher."
     content: "As a Researcher, I'm Interested in Natural & Artificial Intelligence and question how they can be coaporated to solve real-world problems."
     image: "/images/headshot.jpg"
 
@@ -162,37 +162,41 @@ params:
   # ───────────────────────────────────────────────────────────────────────────
   experience:
     enable: true
-    title: "Publications"     # 원한다면 커스텀 제목 지정 가능
-    subtitle: "*: Equal contribution, †: Corresponding author" 
+    title: "Publications"
+    subtitle: "*: Equal contribution, †: Corresponding author"
     items:
-      - job: "OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment"
-        # company: "International Conference"
-        company: "International Conference"
-        # companyUrl: "https://facebook.com"
-        author: "Junhyun Park*, <ins>Chanyu Moon*</ins>, Donghwan Lee, Kyungsu Kim†, Minho Hwang†"
-        # publisher: "MICCAI (2025) [Medical AI Top Conference]"
-        publisher: "Medical Image Computing and Computer Assisted Intervention (MICCAI) - 2025.05"
-        note: "Early Accepted paper [<ins>**top 9%**</ins> of all submissions]"
-        featuredLink:
-          enable: true
-          name: "read paper"
-          url: "https://arxiv.org/pdf/2503.01794"
-        content: |-
-          In this paper, we propose a simple yet effective method to improve the normal detection confidence of radiology CLIP models. 
-          Our method, OFF-CLIP, automatically adjusts the off-diagonal term of the CLIP loss function to enhance the model's ability to distinguish normal from abnormal images.
-      
-      - job: "A Study on the Trends of Adaptive Deep Brain Stimulation in Parkinson's Disease"
-        company: "Domestic Conference"
-        author: "Chanyu Moon, Ji-Woong Choi†"
-        publisher: "한국통신학회 학술대회논문집 - 2025.02"
-        note: An oral presentation was conducted at the DGIST special session.
-        featuredLink:
-            enable: true
-            name: "read paper"
-            url: "https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12132791"
-        content: |-
-          파킨슨 병 (Parkinson’s disease; PD) 환자의 증상 완화법인 개방형 뇌 심부 자극(Open-loop Deep Brain Stimulation; DBS)의 한계를 극복하기 위해 적응형 뇌 심부 자극(adaptive Deep Brain Stimulation; aDBS)이 도입되어 각광받고 있다. 
-          본 연구에서는 PD 환자에서 aDBS 의 입력 신호와 자극 파라미터 조절에  관한 최신 연구 동향을 소개한다.
+      - company: "International Conference"
+        publications:
+          - job: "OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment"
+            image: "/images/IC1_offclip_figure.png"
+            author: "Junhyun Park*, <ins>Chanyu Moon</ins>*, Donghwan Lee, Kyungsu Kim†, Minho Hwang†"
+            publisher: "Medical Image Computing and Computer Assisted Intervention (MICCAI) [Top Medical AI Conference] - 2025.05"
+            note: "Co-First Author, Early Accepted paper [top 9%]"
+            featuredLink:
+              enable: true
+              name: "read paper"
+              url: "https://arxiv.org/pdf/2503.01794"
+            content: "In this paper, we propose a simple yet effective method to improve the normal detection confidence of radiology CLIP models. Our method, OFF-CLIP, automatically adjusts the off-diagonal term of the CLIP loss function to enhance the model’s ability to distinguish normal from abnormal images."
+          # - job: "Another Paper"
+          #   author: "Chanyu Moon, ..."
+          #   publisher: "MICCAI - 2024.05"
+          #   note: "Best Paper Award"
+          #   featuredLink:
+          #     enable: true
+          #     name: "read paper"
+          #     url: "https://arxiv.org/pdf/xxxx.xxxxx"
+          #   content: "This paper presents..."
+      - company: "Domestic Conference"
+        publications:
+          - job: "A Study on the Trends of Adaptive Deep Brain Stimulation in Parkinson's Disease"
+            author: "<ins>Chanyu Moon</ins>, Ji-Woong Choi†"
+            publisher: "한국통신학회 - 2025.02"
+            note: "First Author,Oral presentation conducted at DGIST special session"
+            featuredLink:
+              enable: true
+              name: "read paper"
+              url: "https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE12132791"
+            content: "파킨슨병(Parkinson’s disease; PD) 환자의 증상 완화법인 개방형 뇌 심부 자극(Open-loop Deep Brain Stimulation; DBS)의 한계를 극복하기 위해 적응형 뇌 심부 자극(adaptive Deep Brain Stimulation; aDBS)이 도입되어 각광받고 있다. 본 연구에서는 PD 환자에서의 aDBS의 입력 신호와 자극 파라미터 조절에 관한 최신 연구 동향을 소개한다." 
 
   # ───────────────────────────────────────────────────────────────────────────
   # 3-5) Education 섹션
@@ -278,7 +282,7 @@ params:
   contact:
     enable: true
     # title: "Get in Touch"  # 필요하다면 커스텀 제목
-    content: "My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
+    content: "My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
     btnName: "Mail me"
     btnLink: "mailto:moonchanyu@gmail.com"
     # 만약 Formspree 등 양식을 쓰려면 아래처럼 활성화
