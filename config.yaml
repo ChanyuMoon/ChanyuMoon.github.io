@@ -110,6 +110,20 @@ params:
     title: "Chanyu Moon."
     subtitle: "I'm a graduate researcher."
     content: "As a Researcher, I'm Interested in Natural & Artificial Intelligence and question how they can be coaporated to solve real-world problems."
+    # \item My research goal is to \textbf{understand Natural and Artificial Intelligence(AI) more deeper to solve and help human society}.
+    #     \item \textbf{Using Artificial Intelligence to understand Natual Intelligence}
+    #     \begin{itemize}
+    #     \item To understand the brain, we need to modulate it and analyze its dynamics. Artificial Intellegence can help us to process the complex brain dynamics to understand the brain. 
+    #     \end{itemize}
+    #     \item \textbf{Enhancing Artificial Intelligence based on our understanding of Natural Intelligence}
+    #     \begin{itemize}
+    #     \item If we understand the brain more deeply, we can adapt this to enhance artificial intelligence.
+    #     \end{itemize}
+    #     \item My current research is focused on:
+    #     \begin{itemize}
+    #         \item \textbf{Understanding of Natural Intelligence}: Explainable brain circuit models.
+    #         \item \textbf{Artificial Intelligence for Medical Domain}: Deep brain stimulation for Parkinson's Disease Patient, Chest X-ray classification.
+    #     \end{itemize}
     image: "/images/headshot.jpg"
 
     bottomImage:
@@ -175,17 +189,9 @@ params:
             featuredLink:
               enable: true
               name: "read paper"
-              url: "https://arxiv.org/pdf/2503.01794"
+              url: "https://papers.miccai.org/miccai-2025/paper/3740_paper.pdf" # "https://arxiv.org/pdf/2503.01794"
             content: "In this paper, we propose a simple yet effective method to improve the normal detection confidence of radiology CLIP models. Our method, OFF-CLIP, automatically adjusts the off-diagonal term of the CLIP loss function to enhance the model’s ability to distinguish normal from abnormal images."
-          # - job: "Another Paper"
-          #   author: "Chanyu Moon, ..."
-          #   publisher: "MICCAI - 2024.05"
-          #   note: "Best Paper Award"
-          #   featuredLink:
-          #     enable: true
-          #     name: "read paper"
-          #     url: "https://arxiv.org/pdf/xxxx.xxxxx"
-          #   content: "This paper presents..."
+        
       - company: "Domestic Conference"
         publications:
           - job: "A Study on the Trends of Adaptive Deep Brain Stimulation in Parkinson's Disease"
