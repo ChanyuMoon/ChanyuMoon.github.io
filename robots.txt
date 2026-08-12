@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://moon.chanyu.github.io/sitemap.xml
+Sitemap: https://ChanyuMoon.github.io/sitemap.xml
