@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ChanyuMoon.github.io/sitemap.xml
+Sitemap: https://ChanyuMoon.github.io/al-folio/sitemap.xml
