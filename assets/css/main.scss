@@ -1,0 +1,52 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{site.max_width | default: "930px"}},
+  // Site override: Juniper Berry theme color (light mode) and its dark-mode partner
+  $purple-color: #2f6b6e,
+  $cyan-color: #7cc2c0
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+// Site override: the CV entry list renders its default disc marker next to the date badge
+.cv li.list-group-item {
+  list-style: none;
+}
+
+// Site override: left-align the CV date badge and location, and drop the faint row rules
+.cv .date-column {
+  text-align: left;
+}
+
+.cv .date-column table.table-cv td {
+  border: 0;
+  text-align: left;
+}

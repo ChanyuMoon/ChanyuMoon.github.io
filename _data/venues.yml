@@ -1,9 +1,11 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"MICCAI":
+  url: https://conferences.miccai.org/2025/en/
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
+"ICTC":
+  url: https://ictc.org/
   color: "#009f36"
+
+"KICS":
+  url: https://www.kics.or.kr/
+  color: "#9f3600"

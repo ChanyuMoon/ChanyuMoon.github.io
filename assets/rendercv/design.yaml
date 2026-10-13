@@ -1,6 +1,12 @@
 # for more options, see https://docs.rendercv.com/user_guide/yaml_input_structure/design/
 design:
   theme: classic
+  colors:
+    name: rgb(47, 107, 110)
+    headline: rgb(47, 107, 110)
+    connections: rgb(47, 107, 110)
+    section_titles: rgb(47, 107, 110)
+    links: rgb(47, 107, 110)
   page:
     size: a4
     show_footer: false

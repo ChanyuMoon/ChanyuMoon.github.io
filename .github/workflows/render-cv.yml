@@ -42,7 +42,8 @@ jobs:
             echo "Missing RenderCV config file!"
             exit 1
           fi
-          rendercv render $cv_file --settings $settings
+          # pass design/locale explicitly: RenderCV 2.x ignores the paths under settings.render_command
+          rendercv render $cv_file --settings $settings --design $rendercv_dir/design.yaml --locale-catalog $rendercv_dir/locale.yaml
           rm assets/rendercv/rendercv_output/*.typ
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v4
@@ -54,5 +55,5 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git add -A
-          git commit -m "chore: render the latest CV"
-          git push
+          # skip the commit when the rendered PDF is unchanged
+          git diff --cached --quiet || { git commit -m "chore: render the latest CV" && git push; }
