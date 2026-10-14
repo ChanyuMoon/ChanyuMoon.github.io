@@ -6,6 +6,7 @@ img: assets/img/projects/offclip_pipeline.png
 importance: 2
 category: research
 related_publications: true
+redirect: /projects/offclip/
 ---
 
 **Period:** 2024.06 – 2025.09 · **Role:** Co-first author. Identified the first problem, formulated the off-diagonal term loss, and implemented all baseline models for benchmarking.
