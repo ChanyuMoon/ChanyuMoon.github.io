@@ -1,0 +1,188 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.publication-title,
+.publication-subtitle {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-subtitle {
+  margin-top: 0.5rem !important;
+  line-height: 1.4;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+  margin-top: 1rem;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+
+.publication-affiliations,
+.publication-notes {
+  color: #555;
+  margin-top: 0.4rem;
+}
+
+.venue {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.publication-links {
+  margin-top: 1.25rem;
+}
+
+.publication-links .button {
+  margin: 0.25rem;
+}
+
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.teaser img,
+.section img {
+  display: block;
+  width: 100%;
+  margin: 1rem auto 0;
+  border-radius: 6px;
+}
+
+.caption {
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.results th,
+.results td {
+  text-align: center !important;
+}
+
+.results th:first-child,
+.results td:first-child {
+  text-align: left !important;
+}
+
+.results tr.ours td {
+  font-weight: 700;
+  background: #f0f7ff;
+}
+
+#BibTeX pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.footer {
+  padding: 2rem 1.5rem;
+}
+
+.problem-solution {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .problem-solution {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ps-box {
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.ps-box p,
+.ps-box ol {
+  margin-bottom: 0.6rem;
+}
+
+.ps-box ol {
+  padding-left: 1.2rem;
+}
+
+.ps-box.problem {
+  background: #fff5f5;
+  border-left: 4px solid #e05555;
+}
+
+.ps-box.solution {
+  background: #f2f8ff;
+  border-left: 4px solid #3273dc;
+}
+
+.ps-label {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 700;
+}
+
+.math {
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.results {
+  font-size: 0.9rem;
+}
+
+.results td[rowspan] {
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+h3.title.is-5 {
+  margin-top: 2rem;
+}
+
+.my-role-bar {
+  background: #f7f7f9;
+  border-bottom: 1px solid #e6e6ea;
+  padding: 0.9rem 1.5rem;
+}
+
+.back-link {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.9rem;
+}
+
+.my-role {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.role-item {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.role-item b {
+  color: #3273dc;
+  margin-right: 0.4rem;
+}
+
+.role-desc {
+  margin-top: 0.3rem;
+  color: #444;
+}

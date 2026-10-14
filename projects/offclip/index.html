@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment (MICCAI 2025)">
+  <meta name="keywords" content="OFF-CLIP, CLIP, radiology, chest X-ray, zero-shot, contrastive learning, MICCAI">
+  <title>OFF-CLIP | MICCAI 2025</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script>window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+<nav class="my-role-bar">
+  <div class="container is-max-desktop">
+    <a class="back-link" href="/projects/">&larr; Chanyu Moon · Projects</a>
+    <div class="my-role">
+      <span class="role-item"><b>My role</b> Co-first author</span>
+      <span class="role-item"><b>Period</b> 2024.06 – 2025.09</span>
+      <p class="role-desc">Identified the first problem (false positives from normal pairs), formulated the off-diagonal term loss,
+        and implemented all baseline models for benchmarking.</p>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">OFF-CLIP</h1>
+          <h2 class="subtitle is-4 publication-subtitle">Improving Normal Detection Confidence in Radiology CLIP<br>with Simple Off-Diagonal Term Auto-Adjustment</h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://github.com/Junhyun-Park01">Junhyun Park</a><sup>1*</sup>,</span>
+            <span class="author-block"><a href="https://chanyumoon.github.io">Chanyu Moon</a><sup>2*</sup>,</span>
+            <span class="author-block">Donghwan Lee<sup>3</sup>,</span>
+            <span class="author-block">Kyungsu Kim<sup>3†</sup>,</span>
+            <span class="author-block">Minho Hwang<sup>1†</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-affiliations">
+            <span class="author-block"><sup>1</sup>Dept. of Robotics and Mechatronics Engineering, DGIST</span>
+            <span class="author-block"><sup>2</sup>Dept. of Electrical Engineering and Computer Science, DGIST</span>
+            <span class="author-block"><sup>3</sup>Seoul National University</span>
+          </div>
+          <div class="is-size-6 publication-notes">
+            <span>* Equal contribution &nbsp;&nbsp; † Corresponding author</span>
+          </div>
+
+          <div class="venue">MICCAI 2025 · Early accept (top 9%)</div>
+
+          <div class="publication-links">
+            <a class="button is-normal is-rounded is-dark" href="https://papers.miccai.org/miccai-2025/paper/3740_paper.pdf">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+            </a>
+            <a class="button is-normal is-rounded is-dark" href="https://arxiv.org/abs/2503.01794">
+              <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
+            </a>
+            <a class="button is-normal is-rounded is-dark" href="https://papers.miccai.org/miccai-2025/0649-Paper3740.html">
+              <span class="icon"><i class="fas fa-book-open"></i></span><span>MICCAI</span>
+            </a>
+            <a class="button is-normal is-rounded is-dark" href="https://github.com/Junhyun-Park01/OFF-CLIP">
+              <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Zero-shot classification with CLIP-style models is attractive in radiology because it reduces the need for
+            manual labels. However, conventional contrastive training struggles with normal cases, producing many false
+            positives and false negatives. We identify two causes: InfoNCE treats different normal patients as negative
+            pairs, which prevents a cohesive normal cluster, and reports of abnormal patients contain normal sentences
+            that are forced to align with abnormal images.
+          </p>
+          <p>
+            We propose <b>OFF-CLIP</b>, a simple refinement that introduces an off-diagonal term loss to cluster normal
+            samples, and sentence-level text filtering that removes normal statements from abnormal reports. OFF-CLIP
+            requires no architectural changes. Applied to CARZero, the state-of-the-art zero-shot baseline, it raises
+            normal AUC on VinDr-CXR by 0.61 while maintaining or improving abnormal classification, and it improves
+            pointing-game accuracy for zero-shot grounding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Why do radiology CLIP models miss normal cases?</h2>
+    <div class="content has-text-justified">
+      <p>
+        Radiology CLIP models such as CARZero are trained with InfoNCE, which treats only the matched image-report pair
+        (the diagonal of the similarity matrix) as positive and every other pair in the batch as negative. In chest X-rays
+        this assumption breaks in two ways.
+      </p>
+    </div>
+    <img src="/assets/img/projects/offclip_problem.png" alt="Problem definition">
+    <p class="caption">
+      (a) Conventional diagonal InfoNCE loss, (b) false positives in normal pairs, (c) false negatives in abnormal pairs.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Method</h2>
+    <img src="/assets/img/projects/offclip_pipeline.png" alt="OFF-CLIP pipeline">
+    <p class="caption">
+      OFF-CLIP pipeline: (1) text prompting, (2) sentence-level labeling, (3) text filtering and pair labeling, followed by
+      the off-diagonal term loss and the abnormal InfoNCE loss.
+    </p>
+
+    <div class="problem-solution">
+      <div class="ps-box problem">
+        <p class="ps-label">Problem 1 · False positives in normal pairs</p>
+        <p>
+          Normal images and normal reports look and read almost the same across patients ("There is no pneumothorax.").
+          InfoNCE still pushes different normal patients apart as negatives (<i>S</i><sub>13</sub>, <i>S</i><sub>31</sub>
+          → 0 in (b)), so normal samples never form a cohesive cluster and the model is not confident that an image is
+          normal.
+        </p>
+      </div>
+      <div class="ps-box solution">
+        <p class="ps-label">Solution · Off-diagonal term loss</p>
+        <p>
+          Every entry of the similarity matrix gets a binary cross-entropy target. The diagonal stays positive, and the
+          off-diagonal entries between two normal pairs are also set positive:
+        </p>
+        <p class="math">\[
+          \hat{Y}_{ij} =
+          \begin{cases}
+            1 & \text{if } i = j \ \text{ or both } i, j \text{ are normal}\\
+            0 & \text{otherwise}
+          \end{cases}
+        \]</p>
+        <p class="math">\[
+          \mathcal{L}_{\mathrm{off}} = -\frac{1}{2B^2}\sum_{i=1}^{B}\sum_{j=1}^{B}
+          \Big[\hat{Y}_{ij}\log\sigma(S_{ij}) + (1-\hat{Y}_{ij})\log\big(1-\sigma(S_{ij})\big)
+          + \hat{Y}_{ji}\log\sigma(S_{ji}) + (1-\hat{Y}_{ji})\log\big(1-\sigma(S_{ji})\big)\Big]
+        \]</p>
+        <p>This pulls all normal samples together while keeping the standard diagonal alignment.</p>
+      </div>
+    </div>
+
+    <div class="problem-solution">
+      <div class="ps-box problem">
+        <p class="ps-label">Problem 2 · False negatives in abnormal pairs</p>
+        <p>
+          Reports of abnormal patients also contain normal sentences, e.g. "There is no focal consolidation." next to
+          "There are bilateral nodular opacities." Training aligns these normal sentences with an abnormal image
+          (<i>S</i><sub>22</sub> → 1 in (c)) and pushes them away from normal images (<i>S</i><sub>21</sub> → 0), which
+          confuses the boundary between normal and abnormal.
+        </p>
+      </div>
+      <div class="ps-box solution">
+        <p class="ps-label">Solution · Text prompting and filtering</p>
+        <ol>
+          <li><b>Text prompting:</b> GPT-4o extracts the Findings and Impression sections and rewrites them into
+            CARZero-style sentences ("There is pleural effusion at the left lung base.").</li>
+          <li><b>Sentence labeling:</b> a pretrained radiology sentence-level anomaly classifier labels each sentence as
+            normal, abnormal or uncertain. A report with at least one abnormal sentence is abnormal; otherwise it is
+            normal. These pseudo-labels need no human annotation.</li>
+          <li><b>Filtering:</b> normal and uncertain sentences are removed from abnormal reports, so an abnormal image is
+            aligned only with text that describes its abnormality.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="content has-text-justified">
+      <h3 class="title is-5">Abnormal InfoNCE and the final objective</h3>
+      <p>
+        To keep fine-grained discrimination between different abnormalities, the standard InfoNCE loss is applied only to
+        the <i>A</i> abnormal pairs in the batch:
+      </p>
+      <p class="math">\[
+        \mathcal{L}_{ab} = -\frac{1}{A}\sum_{i=1}^{A}\left[
+        \log\frac{e^{S^{ab}_{ii}}}{\sum_{j=1}^{A} e^{S^{ab}_{ij}}} +
+        \log\frac{e^{S^{ab}_{ii}}}{\sum_{j=1}^{A} e^{S^{ab}_{ji}}}\right],
+        \qquad
+        \mathcal{L}_{\text{OFF-CLIP}} = \mathcal{L}_{\mathrm{off}} + \lambda_{ab}\,\mathcal{L}_{ab}\ \ (\lambda_{ab}=1)
+      \]</p>
+      <p>
+        OFF-CLIP changes only the training objective and the text, not the architecture. Following CARZero, it uses a
+        ViT-B/16 image encoder pretrained with M3AE and a BioBERT text encoder, trained on frontal images from MIMIC-CXR.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results</h2>
+
+    <h3 class="title is-5">Zero-shot classification</h3>
+    <div class="content has-text-justified">
+      <p>
+        Applied to CARZero, OFF-CLIP raises normal AUC on all four external test sets, by 0.50 on average (0.61 on
+        VinDr-CXR), and raises total AUC by 0.095 on average, so abnormal classes are maintained or improved rather than
+        traded off.
+      </p>
+    </div>
+    <div class="table-container">
+      <table class="table is-fullwidth is-hoverable is-narrow results">
+        <thead>
+          <tr><th>Dataset</th><th>OFF-CLIP</th><th>Normal</th><th>ATE</th><th>CM</th><th>EMPH</th><th>EFF</th><th>NOD</th><th>PLT</th><th>PNA</th><th>Total</th></tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="2">VinDr-CXR</td><td>✗</td><td>0.25</td><td>0.74</td><td>0.91</td><td>0.93</td><td>0.94</td><td>0.47</td><td>0.75</td><td>0.90</td><td>0.79</td></tr>
+          <tr class="ours"><td>✓</td><td>0.86</td><td>0.84</td><td>0.93</td><td>0.95</td><td>0.94</td><td>0.86</td><td>0.86</td><td>0.83</td><td>0.87</td></tr>
+          <tr><td rowspan="2">Open-I</td><td>✗</td><td>0.32</td><td>0.79</td><td>0.89</td><td>0.83</td><td>0.93</td><td>0.55</td><td>0.73</td><td>0.84</td><td>0.72</td></tr>
+          <tr class="ours"><td>✓</td><td>0.74</td><td>0.81</td><td>0.90</td><td>0.91</td><td>0.93</td><td>0.60</td><td>0.76</td><td>0.84</td><td>0.81</td></tr>
+          <tr><td rowspan="2">PadChest</td><td>✗</td><td>0.24</td><td>0.78</td><td>0.87</td><td>0.78</td><td>0.95</td><td>0.52</td><td>0.66</td><td>0.80</td><td>0.68</td></tr>
+          <tr class="ours"><td>✓</td><td>0.77</td><td>0.82</td><td>0.88</td><td>0.89</td><td>0.95</td><td>0.64</td><td>0.81</td><td>0.80</td><td>0.76</td></tr>
+          <tr><td rowspan="2">CheXpert</td><td>✗</td><td>0.38</td><td>0.73</td><td>0.86</td><td>-</td><td>0.92</td><td>-</td><td>-</td><td>0.65</td><td>0.73</td></tr>
+          <tr class="ours"><td>✓</td><td>0.81</td><td>0.87</td><td>0.88</td><td>-</td><td>0.92</td><td>-</td><td>-</td><td>0.79</td><td>0.86</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">
+      Zero-shot AUC of CARZero without (✗) and with (✓) OFF-CLIP. ATE: atelectasis, CM: cardiomegaly, EMPH: emphysema,
+      EFF: effusion, NOD: nodule, PLT: pleural thickening, PNA: pneumonia.
+    </p>
+
+    <h3 class="title is-5">Ablation: each component addresses one error type</h3>
+    <div class="content has-text-justified">
+      <p>
+        On Open-I, the off-diagonal term loss alone lifts normal AUC above 0.7, but without filtering the abnormal classes
+        collapse. Text filtering restores abnormal performance, and combining all three components gives the best balance:
+        the gap between FN and FP shares of the errors drops from 0.9986 for the baseline, which labels almost everything
+        abnormal, to 0.01.
+      </p>
+    </div>
+    <div class="table-container">
+      <table class="table is-fullwidth is-hoverable is-narrow results">
+        <thead>
+          <tr><th>Text filter</th><th>L<sub>off</sub></th><th>L<sub>ab</sub></th><th>Normal</th><th>ATE</th><th>CALC</th><th>CM</th><th>EMPH</th><th>MASS</th><th>NOD</th><th>OPAC</th><th>PLT</th><th>Total</th><th>|FN − FP| share</th></tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td>0.32</td><td>0.79</td><td>0.59</td><td>0.89</td><td>0.83</td><td>0.68</td><td>0.55</td><td>0.79</td><td>0.73</td><td>0.72</td><td>0.9986</td></tr>
+          <tr><td></td><td>✓</td><td></td><td>0.72</td><td>0.29</td><td>0.49</td><td>0.34</td><td>0.33</td><td>0.31</td><td>0.47</td><td>0.24</td><td>0.28</td><td>0.32</td><td>0.06</td></tr>
+          <tr><td></td><td>✓</td><td>✓</td><td>0.75</td><td>0.24</td><td>0.46</td><td>0.30</td><td>0.27</td><td>0.27</td><td>0.44</td><td>0.23</td><td>0.26</td><td>0.29</td><td>0.14</td></tr>
+          <tr><td>✓</td><td></td><td></td><td>0.62</td><td>0.58</td><td>0.50</td><td>0.64</td><td>0.46</td><td>0.27</td><td>0.49</td><td>0.31</td><td>0.41</td><td>0.44</td><td>0.46</td></tr>
+          <tr><td>✓</td><td>✓</td><td></td><td>0.72</td><td>0.77</td><td>0.55</td><td>0.84</td><td>0.85</td><td>0.76</td><td>0.61</td><td>0.75</td><td>0.74</td><td>0.78</td><td>0.14</td></tr>
+          <tr class="ours"><td>✓</td><td>✓</td><td>✓</td><td>0.74</td><td>0.81</td><td>0.60</td><td>0.90</td><td>0.91</td><td>0.85</td><td>0.60</td><td>0.73</td><td>0.76</td><td>0.81</td><td>0.01</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">
+      Ablation on Open-I with CARZero (AUC). The last column is |FN/(FP+FN) − FP/(FP+FN)|; lower means false positives
+      and false negatives are balanced. CALC: calcification, OPAC: opacity.
+    </p>
+
+    <h3 class="title is-5">Zero-shot grounding</h3>
+    <div class="content has-text-justified">
+      <p>
+        Better separation of normal and abnormal also improves localization. In the pointing game on VinDr-CXR, OFF-CLIP
+        improves calcification from 0.30 to 0.59 with the top 10% attention, and pneumothorax from 0.63 to 1.00 with the
+        top 20%.
+      </p>
+    </div>
+    <div class="table-container">
+      <table class="table is-fullwidth is-hoverable is-narrow results">
+        <thead>
+          <tr><th>Attention</th><th>Method</th><th>AE</th><th>ATE</th><th>CALC</th><th>CM</th><th>CONS</th><th>EFF</th><th>INF</th><th>NOD</th><th>OPAC</th><th>PLT</th><th>PTX</th></tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="2">Top 10%</td><td>CARZero</td><td>0.94</td><td>0.61</td><td>0.30</td><td>0.99</td><td>0.84</td><td>0.69</td><td>0.80</td><td>0.47</td><td>0.66</td><td>0.33</td><td>0.63</td></tr>
+          <tr class="ours"><td>+ OFF-CLIP</td><td>1.00</td><td>0.78</td><td>0.59</td><td>1.00</td><td>0.95</td><td>0.89</td><td>0.90</td><td>0.73</td><td>0.92</td><td>0.47</td><td>1.00</td></tr>
+          <tr><td rowspan="2">Top 20%</td><td>CARZero</td><td>0.99</td><td>0.78</td><td>0.59</td><td>1.00</td><td>0.97</td><td>0.79</td><td>0.90</td><td>0.64</td><td>0.83</td><td>0.47</td><td>0.63</td></tr>
+          <tr class="ours"><td>+ OFF-CLIP</td><td>1.00</td><td>0.89</td><td>0.82</td><td>1.00</td><td>0.97</td><td>1.00</td><td>0.95</td><td>0.84</td><td>0.96</td><td>0.67</td><td>1.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">
+      Pointing-game accuracy on VinDr-CXR using the top 10% / 20% attention per disease prompt. AE: aortic enlargement,
+      CONS: consolidation, INF: infiltration, PTX: pneumothorax.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{park2025off,
+  title     = {OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment},
+  author    = {Park, Junhyun and Moon, Chanyu and Lee, Donghwan and Kim, Kyungsu and Hwang, Minho},
+  booktitle = {Proceedings of the 28th International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)},
+  year      = {2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Page layout adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page,
+        licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
