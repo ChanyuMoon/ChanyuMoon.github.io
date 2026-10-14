@@ -48,6 +48,51 @@ cv:
           - "Undergraduate research: ESG-based exoskeleton robot control (UGRP)"
           - "Key coursework: Intro to AI / Deep Learning / Computer Vision, Reinforcement Learning, Data Science, Data Structures, Algorithms, Operating Systems, System Programming, Linear Algebra, Probability & Statistics, Neuroscience I"
 
+    Experience:
+      - company: Intelligence Augmentation Group, DGIST
+        position: Undergraduate Research Intern
+        location: Daegu, Korea
+        start_date: 2023-12
+        end_date: 2024-01
+        highlights:
+          - "Supervisor: Prof. Jean Young Song"
+          - Investigated Human-AI interaction methodologies and data labeling efficiency for AI training.
+
+      - company: McMaster University
+        position: International Research Intern
+        location: Hamilton, Canada
+        start_date: 2023-07
+        end_date: 2023-08
+        highlights:
+          - "Supervisor: Prof. Qiyin Fang"
+          - Developed smart home system frameworks for elderly care, focusing on automated sensor integration.
+
+      - company: Communications and Signal Processing Lab, DGIST
+        position: Undergraduate Research Intern
+        location: Daegu, Korea
+        start_date: 2022-06
+        end_date: 2022-07
+        highlights:
+          - "Supervisor: Prof. Ji-Woong Choi"
+          - Applied general linear models (GLM) to extract features from bio-signals.
+
+      - company: Undergraduate Research Program (UGRP), DGIST
+        position: Student Researcher
+        location: Daegu, Korea
+        start_date: 2022-01
+        end_date: 2022-12
+        highlights:
+          - "Supervisor: Prof. Ji-Woong Choi"
+          - "Project: Development of an ESG-based control system for exoskeleton robots; developed a model estimating motor intention from EMG."
+
+      - company: International College Student Creative Car Competition
+        position: Software Team Member
+        location: Korea
+        start_date: 2022-03
+        end_date: 2022-10
+        highlights:
+          - Developed an object detection model.
+
     Publications:
       - title: "OFF-CLIP: Improving Normal Detection Confidence in Radiology CLIP with Simple Off-Diagonal Term Auto-Adjustment"
         authors:
@@ -106,51 +151,6 @@ cv:
         highlights:
           - Formulated a first-order Taylor approximation of InfoNCE that bypasses the batch-by-batch similarity matrix.
           - Achieved up to 7.3x speedup and 8.5x peak-memory reduction on TS2Vec (UCI HAR) with comparable accuracy.
-
-    Experience:
-      - company: Intelligence Augmentation Group, DGIST
-        position: Undergraduate Research Intern
-        location: Daegu, Korea
-        start_date: 2023-12
-        end_date: 2024-01
-        highlights:
-          - "Supervisor: Prof. Jean Young Song"
-          - Investigated Human-AI interaction methodologies and data labeling efficiency for AI training.
-
-      - company: McMaster University
-        position: International Research Intern
-        location: Hamilton, Canada
-        start_date: 2023-07
-        end_date: 2023-08
-        highlights:
-          - "Supervisor: Prof. Qiyin Fang"
-          - Developed smart home system frameworks for elderly care, focusing on automated sensor integration.
-
-      - company: Communications and Signal Processing Lab, DGIST
-        position: Undergraduate Research Intern
-        location: Daegu, Korea
-        start_date: 2022-06
-        end_date: 2022-07
-        highlights:
-          - "Supervisor: Prof. Ji-Woong Choi"
-          - Applied general linear models (GLM) to extract features from bio-signals.
-
-      - company: Undergraduate Research Program (UGRP), DGIST
-        position: Student Researcher
-        location: Daegu, Korea
-        start_date: 2022-01
-        end_date: 2022-12
-        highlights:
-          - "Supervisor: Prof. Ji-Woong Choi"
-          - "Project: Development of an ESG-based control system for exoskeleton robots; developed a model estimating motor intention from EMG."
-
-      - company: International College Student Creative Car Competition
-        position: Software Team Member
-        location: Korea
-        start_date: 2022-03
-        end_date: 2022-10
-        highlights:
-          - Developed an object detection model.
 
     # Skills:
     #   - name: Programming
