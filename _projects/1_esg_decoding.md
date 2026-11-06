@@ -5,6 +5,7 @@ description: Muscle-guided latent representation distillation for robust ESG-bas
 img: assets/img/projects/esg_overview.png
 importance: 1
 category: research
+related_publications: true
 ---
 
 **Period:** 2025.10 – 2026.08 · **Role:** Lead researcher (M.S. thesis research)
@@ -39,3 +40,5 @@ We propose a decoding framework with two variants, **ESG-CL** (contrastive learn
 
 1. Comparative analysis against single-modality models on healthy subjects.
 2. A simulated quadriplegia scenario (zero-EMG condition), where the target subject's EMG is completely withheld, comparing ESG-CL and ESG-DT against EEG-only and ESG-only baselines.
+
+**Publication:** {% cite moon2026muscle %}
